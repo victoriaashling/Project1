@@ -11,6 +11,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <div>
+        <fb:login-button 
+            scope="public_profile,email"
+            onlogin="checkLoginState();">
+        </fb:login-button>
+    </div>
+
+    <div><a href="test.html">Test</a></div>
+
+
     <script>
         window.fbAsyncInit = function() {
           FB.init({
@@ -36,16 +47,6 @@
            fjs.parentNode.insertBefore(js, fjs);
          }(document, 'script', 'facebook-jssdk'));
     </script>
-
-        
-    <div>
-        <fb:login-button 
-            scope="public_profile,email"
-            onlogin="checkLoginState();">
-        </fb:login-button>
-    </div>
-
-    <div><a href="test.html">Test</a></div>
 
 
     <script
