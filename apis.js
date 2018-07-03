@@ -4,6 +4,10 @@ function checkLoginState() {
     });
 }
 
+function testAPI() {
+    console.log("not sure what this is meant to be for yet");
+}
+
 function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
@@ -19,8 +23,4 @@ function statusChangeCallback(response) {
       document.getElementById('status').innerHTML = 'Please log ' +
         'into this app.';
     }
-}
-
-function testAPI() {
-    console.log("not sure what this is meant to be for yet");
 }
