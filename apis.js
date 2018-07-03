@@ -1,3 +1,9 @@
+function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+}
+
 function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
@@ -15,9 +21,6 @@ function statusChangeCallback(response) {
     }
 }
 
-
-function checkLoginState() {
-    FB.getLoginStatus(function(response) {
-      statusChangeCallback(response);
-    });
-  }
+function testAPI() {
+    console.log("not sure what this is meant to be for yet");
+}
