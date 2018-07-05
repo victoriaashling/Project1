@@ -29,7 +29,7 @@
     </div>
 
     <a href="test.html">Test</a>
-    <div>1.4</div>
+    <div>1.5</div>
 
     <script>
         window.fbAsyncInit = function() {
@@ -61,6 +61,11 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 
     <script>
+
+        $(".test-div").on("click", function(){
+            console.log("clicked test div");
+        })
+
       function onSignIn(googleUser) {
         // Useful data for your client-side scripts:
         var profile = googleUser.getBasicProfile();
