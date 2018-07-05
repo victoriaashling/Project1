@@ -1,3 +1,5 @@
+$(document).ready(function() {
+
 function checkLoginState() {
     FB.getLoginStatus(function(response) {
       statusChangeCallback(response);
@@ -65,3 +67,5 @@ $(".fb-login-button").click(function() {
 //   }
 
 // document.getElementById("default-open").click();
+
+})
