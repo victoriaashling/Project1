@@ -9,11 +9,7 @@
     <meta name="google-signin-client_id" content="987825665363-uls95vm75d2than615g6nf06gpj8o62e.apps.googleusercontent.com">
 
     <title>Knocked Up</title>
-    <script
-        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
-        crossorigin="anonymous">
-    </script>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -23,7 +19,7 @@
         <div id="status"></div>
 
         <div  id="fb-login" class="fb-login-button" data-width="200" data-height="50" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
-        <div class="test-div" style="width:50px; height: 50px; background:gree;"></div>
+
         <div class="g-signin2"  data-width="200" data-height="50" data-onsuccess="onSignIn"></div> <!-- data-theme="dark" -->
 
         <div id="log-out">
@@ -33,7 +29,7 @@
     </div>
 
     <a href="test.html">Test</a>
-    <div>1.6</div>
+    <div>1.7</div>
 
     <script>
         window.fbAsyncInit = function() {
@@ -65,11 +61,6 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 
     <script>
-
-        $(".test-div").on("click", function(){
-            console.log("clicked test div");
-        })
-
       function onSignIn(googleUser) {
         // Useful data for your client-side scripts:
         var profile = googleUser.getBasicProfile();
@@ -92,7 +83,11 @@
     </script>
 
 
-   
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+        crossorigin="anonymous">
+    </script>
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
     <script src="firebase.js"></script>
     <script src="apis.js"></script>
