@@ -37,9 +37,9 @@ $("#log-out-button").click(function() {
     })
 })
 
-$("#fb-login").click(function() {
-    checkLoginState();
-})
+// $(".fb-login-button").click(function() {
+//     checkLoginState();
+// })
 
 
 
