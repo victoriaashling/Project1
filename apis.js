@@ -31,7 +31,8 @@ function testAPI() {
     });
 }
 
-function logOut() {
-    var logOutButton = $("<button id='log-out-button'>Log Out</button>")
-    $("#log-out").append(logOutButton);
-}
+$("#log-out-button").click(function() {
+    FB.logout(function(response){
+        
+    })
+})
