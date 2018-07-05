@@ -39,7 +39,7 @@ $(document).ready(function() {
         })
     })
 ;    
-    $(".fb-login-button").click(function() {
+    $("#fb-login").click(function() {
         console.log("click");
         checkLoginState();
     })
