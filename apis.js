@@ -36,3 +36,9 @@ $("#log-out-button").click(function() {
         checkLoginState();
     })
 })
+
+$(".fb-login-button").click(function() {
+    FB.logout(function(response){
+        checkLoginState();
+    })
+})
