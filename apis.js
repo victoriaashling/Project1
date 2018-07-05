@@ -38,8 +38,8 @@ $(document).ready(function() {
             checkLoginState();
         })
     })
-;    
-    $("#fb-login").click(function() {
+    
+    $(".fb-login-button").click(function() {
         console.log("click");
         checkLoginState();
     })
