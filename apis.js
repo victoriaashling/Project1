@@ -33,6 +33,6 @@ function testAPI() {
 
 $("#log-out-button").click(function() {
     FB.logout(function(response){
-        statusChangeCallback();
+        statusChangeCallback(response);
     })
 })
