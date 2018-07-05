@@ -1,4 +1,3 @@
-$(document).ready(function() {
 
 function checkLoginState() {
     FB.getLoginStatus(function(response) {
