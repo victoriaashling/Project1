@@ -28,3 +28,12 @@ button.anon.active {
 button.log-in.active {
     box-shadow: inset 3px 2px 5px rgba(0, 0, 0, 0.25);
 }
+
+#fb-login {
+    background-image: url(images/F_Logo_Online_04_2018/white/SVG/flogo-HexRBG-Wht-100.svg);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-color: #4267B2;
+    width: 200px;
+    height: 50px;
+}
