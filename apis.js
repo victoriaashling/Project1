@@ -30,3 +30,8 @@ function testAPI() {
       console.log(response);
     });
 }
+
+function logOut() {
+    var logOutButton = $("<button id='log-out-button'>Log Out</button>")
+    $("#log-out").append(logOutButton);
+}

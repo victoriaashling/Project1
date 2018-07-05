@@ -15,9 +15,15 @@
 </head>
 <body>
 
-    <div id="status"></div>
+    <div class="container">
+        <div id="status"></div>
 
-    <div class="fb-login-button" data-width="200" data-height="50" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
+        <div class="fb-login-button" data-width="200" data-height="50" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
+
+        <div class="g-signin2"  data-width="200" data-height="50" data-onsuccess="onSignIn" data-theme="dark"></div>
+
+        <div id="log-out"></div>
+    </div>
 
     <script>
         window.fbAsyncInit = function() {
@@ -47,7 +53,6 @@
 
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 
-    <div class="g-signin2"  data-width="200" data-height="50" data-onsuccess="onSignIn" data-theme="dark"></div>
     <script>
       function onSignIn(googleUser) {
         // Useful data for your client-side scripts:
@@ -72,7 +77,7 @@
         crossorigin="anonymous">
     </script>
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-    <!-- <script src="firebase.js"></script> -->
+    <script src="firebase.js"></script>
     <script src="apis.js"></script>
     <script src="game.js"></script>
 </body>
