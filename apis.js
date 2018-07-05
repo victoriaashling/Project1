@@ -34,12 +34,16 @@ function testAPI() {
 }
 
 $("#log-out-button").click(function() {
+    console.log("click")
     FB.logout(function(response){
+        console.log("response")
         checkLoginState();
     })
 })
 
 $(".fb-login-button").click(function() {
+    console.log("click")
+    console.log("response")
     checkLoginState();
 })
 
