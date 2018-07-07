@@ -10,7 +10,7 @@ var config = {
 firebase.initializeApp(config);
 var database = firebase.database();
 
-var provider = new firebase.auth.FacebookAuthProvider();
+// var provider = new firebase.auth.FacebookAuthProvider();
 provider.setCustomParameters({
     'display': 'popup'
 });
