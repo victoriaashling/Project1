@@ -15,7 +15,9 @@
 </head>
 <body>
 
-    <div class="container">
+    <div class="container" id="title-div">Title</div>
+
+    <div class="container" id="login-btns">
         <div id="status"></div>
 
         <button class="btn" id="fb-login" onclick="FB.login();"><img src="images/flogo-HexRBG-Wht-58.svg" id="fb-logo">Log in</button>
@@ -23,15 +25,19 @@
         <!-- <button class="btn g-signin2" id="google-login"><img src="images/128px-Google__G__Logo.png" id="google-logo">Google</button> -->
 
         <div class="g-signin2"  data-width="200" data-height="50" data-onsuccess="onSignIn"></div> <!-- data-theme="dark" -->
+    </div>
 
+    <div class="container" id="instructions">Instructions</div>
+
+    <div class="container" id="game">
+        <h4>Game</h4>
         <div id="log-out">
             <button id='log-out-button'>FB Log Out</button>
             <a href="#" onclick="signOut();">Google Sign out</a>
         </div>
     </div>
 
-    <a href="test.html">Test</a>
-    <div>1.21</div>
+    <div>1.22</div>
 
     <script>
         window.fbAsyncInit = function() {
