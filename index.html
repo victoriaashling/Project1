@@ -43,7 +43,7 @@
         </div>
     </div>
 
-    <div>1.27</div>
+    <div>1.28</div>
 
     <script>
         window.fbAsyncInit = function() {
@@ -65,7 +65,7 @@
 
           FB.Event.subscribe("auth.logout", function(response) {
               console.log("logout button")
-              localStorage.removeItem("facebookID");
+            //   localStorage.removeItem("facebookID");
               showTitlePage();
           });
           
