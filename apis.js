@@ -33,7 +33,7 @@ var instructionsSeen = false;
 
 
 function showTitlePage() {
-    $("#title-dv").show();
+    $("#title-div").show();
     $("#login-btns").hide();
     $("#instructions").hide();
     $("#game").hide();
@@ -60,6 +60,14 @@ function showGame() {
     $("#instructions").hide();
     $("#game").show();
 }
+
+function hideAll() {
+    $("#title-div").hide();
+    $("#login-btns").hide();
+    $("#instructions").hide();
+    $("#game").hide();
+}
+hideAll();
 
 $(document).ready(function() {
 
