@@ -30,7 +30,7 @@ function testAPI() {
 
       localStorage.setItem("facebookID", response.id);
 
-      if (localStorage.instructionsSeen === "false") {
+      if (localStorage.instructionsSeen === false) {
         showInstructions();
       }
       else {
