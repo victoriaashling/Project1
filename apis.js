@@ -47,7 +47,7 @@ $(document).ready(function() {
     $("#game").hide();
 
 
-    $("#title.btn").click(function() {
+    $("#title-div").click(function() {
         $("#title").hide();
         $("#login-btns").show();
         $("#instructions").hide();
