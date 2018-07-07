@@ -66,7 +66,7 @@ $(document).ready(function() {
     showTitlePage();
 
     $("#title-btn").click(function() {
-        if ((localStorgae.getItem("facebookID")) === null && (localStorage.getItem("googleID") === null)) {
+        if ((localStorgae.facebookID === undefined) && (localStorage.googleID === undefined)) {
             showLoginBtns();
         }
         else {
