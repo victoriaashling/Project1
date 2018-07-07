@@ -33,6 +33,31 @@ $("#log-out-button").click(function() {
     })
 })
 
-// $(".fb-login-button").click(function() {
-//     checkLoginState();
-// })
+function goToInstructions() {
+    $("#title").hide();
+    $("#login-btns").hide();
+    $("#instructions").show();
+    $("#game").hide();
+}
+
+$(document).ready(function() {
+    $("#title").show();
+    $("#login-btns").hide();
+    $("#instructions").hide();
+    $("#game").hide();
+
+
+    $("#title.btn").click(function() {
+        $("#title").hide();
+        $("#login-btns").show();
+        $("#instructions").hide();
+        $("#game").hide();
+    })
+
+    $("#play-btn").click(function() {
+        $("#title").hide();
+        $("#login-btns").hide();
+        $("#instructions").hide();
+        $("#game").show();
+    })
+});

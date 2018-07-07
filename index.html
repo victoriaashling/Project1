@@ -15,7 +15,10 @@
 </head>
 <body>
 
-    <div class="container" id="title-div">Title</div>
+    <div class="container" id="title-div">
+        <h4>Title</h4>
+        <button class="btn" id="title-btn">Continue</button>
+    </div>
 
     <div class="container" id="login-btns">
         <div id="status"></div>
@@ -27,7 +30,10 @@
         <div class="g-signin2"  data-width="200" data-height="50" data-onsuccess="onSignIn"></div> <!-- data-theme="dark" -->
     </div>
 
-    <div class="container" id="instructions">Instructions</div>
+    <div class="container" id="instructions">
+        <h4>Instructions</h4>
+        <button class="btn" id="play-btn">Play</button>
+    </div>
 
     <div class="container" id="game">
         <h4>Game</h4>
@@ -54,6 +60,7 @@
           FB.Event.subscribe("auth.login", function(response) {
               console.log("login button")
               location.reload();
+              goToInstructions();
           });
           
           FB.getLoginStatus(function(response) {
@@ -89,6 +96,7 @@
         console.log("ID Token: " + id_token);
 
         localStorage.setItem("googleID", profile.getId());
+        goToInstructions();
       };
       function signOut() {
           var auth2 = gapi.auth2.getAuthInstance();
