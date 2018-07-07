@@ -43,7 +43,7 @@
         </div>
     </div>
 
-    <div>1.33</div>
+    <div>1.34</div>
 
     <script>
         window.fbAsyncInit = function() {
@@ -59,7 +59,10 @@
 
           FB.Event.subscribe("auth.login", function(response) {
               console.log("login button")
-              location.reload();
+            //   location.reload();
+            FB.getLoginStatus(function(response) {
+              statusChangeCallback(response);
+            });  
               showInstructions();
           });
 
