@@ -72,6 +72,10 @@ $(document).ready(function() {
         else {
             showGame();
         }
+    });
+
+    $("#play-btn").click(function() {
+        showGame();
     })
 
 });
