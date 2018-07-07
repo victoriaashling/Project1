@@ -33,31 +33,31 @@ function testAPI() {
 //     })
 // })
 
-function goToInstructions() {
-    $("#title-div").hide();
-    $("#login-btns").hide();
-    $("#instructions").show();
-    $("#game").hide();
-}
+// function goToInstructions() {
+//     $("#title-div").hide();
+//     $("#login-btns").hide();
+//     $("#instructions").show();
+//     $("#game").hide();
+// }
 
-$(document).ready(function() {
-    $("#title-dv").show();
-    $("#login-btns").hide();
-    $("#instructions").hide();
-    $("#game").hide();
+// $(document).ready(function() {
+//     $("#title-dv").show();
+//     $("#login-btns").hide();
+//     $("#instructions").hide();
+//     $("#game").hide();
 
 
-    $("#title-div").click(function() {
-        $("#title-div").hide();
-        $("#login-btns").show();
-        $("#instructions").hide();
-        $("#game").hide();
-    })
+//     $("#title-div").click(function() {
+//         $("#title-div").hide();
+//         $("#login-btns").show();
+//         $("#instructions").hide();
+//         $("#game").hide();
+//     })
 
-    $("#play-btn").click(function() {
-        $("#title-div").hide();
-        $("#login-btns").hide();
-        $("#instructions").hide();
-        $("#game").show();
-    })
-});
+//     $("#play-btn").click(function() {
+//         $("#title-div").hide();
+//         $("#login-btns").hide();
+//         $("#instructions").hide();
+//         $("#game").show();
+//     })
+// });
