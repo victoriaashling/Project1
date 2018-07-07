@@ -38,12 +38,12 @@
     <div class="container" id="game">
         <h4>Game</h4>
         <div id="log-out">
-            <button id='log-out-button'>FB Log Out</button>
+            <button id='log-out-button' onclick="FB.logout();">FB Log Out</button>
             <a href="#" onclick="signOut();">Google Sign out</a>
         </div>
     </div>
 
-    <div>1.24</div>
+    <div>1.25</div>
 
     <script>
         window.fbAsyncInit = function() {
@@ -61,6 +61,12 @@
               console.log("login button")
               location.reload();
               goToInstructions();
+          });
+
+          FB.Event.subscribe("auth.logout", function(response) {
+              console.log("logout button")
+            //   location.reload();
+            //   goToInstructions();
           });
           
           FB.getLoginStatus(function(response) {
@@ -103,6 +109,7 @@
           auth2.signOut().then(function () {
           console.log('User signed out.');
           });
+          localStorage.removeItem("googleID");
       }
     </script>
 

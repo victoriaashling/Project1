@@ -27,11 +27,11 @@ function testAPI() {
     });
 }
 
-$("#log-out-button").click(function() {
-    FB.logout(function(response){
-        checkLoginState();
-    })
-})
+// $("#log-out-button").click(function() {
+//     FB.logout(function(response){
+//         checkLoginState();
+//     })
+// })
 
 function goToInstructions() {
     $("#title-div").hide();
