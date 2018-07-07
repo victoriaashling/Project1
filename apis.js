@@ -27,37 +27,51 @@ function testAPI() {
     });
 }
 
-// $("#log-out-button").click(function() {
-//     FB.logout(function(response){
-//         checkLoginState();
-//     })
-// })
 
-// function goToInstructions() {
-//     $("#title-div").hide();
-//     $("#login-btns").hide();
-//     $("#instructions").show();
-//     $("#game").hide();
-// }
-
-// $(document).ready(function() {
-//     $("#title-dv").show();
-//     $("#login-btns").hide();
-//     $("#instructions").hide();
-//     $("#game").hide();
+var instructionsSeen = false;
 
 
-//     $("#title-div").click(function() {
-//         $("#title-div").hide();
-//         $("#login-btns").show();
-//         $("#instructions").hide();
-//         $("#game").hide();
-//     })
 
-//     $("#play-btn").click(function() {
-//         $("#title-div").hide();
-//         $("#login-btns").hide();
-//         $("#instructions").hide();
-//         $("#game").show();
-//     })
-// });
+function showTitlePage() {
+    $("#title-dv").show();
+    $("#login-btns").hide();
+    $("#instructions").hide();
+    $("#game").hide();
+}
+
+function showLoginBtns() {
+    $("#title-div").hide();
+    $("#login-btns").show();
+    $("#instructions").hide();
+    $("#game").hide();
+}
+
+function showInstructions() {
+    $("#title-div").hide();
+    $("#login-btns").hide();
+    $("#instructions").show();
+    $("#game").hide();
+    instructionsSeen = true;
+}
+
+function showGame() {
+    $("#title-div").hide();
+    $("#login-btns").hide();
+    $("#instructions").hide();
+    $("#game").show();
+}
+
+$(document).ready(function() {
+
+    showTitlePage();
+
+    $("#title-btn").click(function() {
+        if (localstorgae.getItem("facebookID") || localStorage.getItem("googleID")) {
+            showGame();
+        }
+        else {
+            showLoginBtns();
+        }
+    })
+
+});

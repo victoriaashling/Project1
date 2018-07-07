@@ -27,7 +27,7 @@
 
         <!-- <button class="btn g-signin2" id="google-login"><img src="images/128px-Google__G__Logo.png" id="google-logo">Google</button> -->
 
-        <div class="g-signin2"  data-width="200" data-height="50" data-onsuccess="onSignIn"></div> <!-- data-theme="dark" -->
+        <div class="g-signin2" id="google-login"  data-width="200" data-height="50" data-onsuccess="onSignIn"></div> <!-- data-theme="dark" -->
     </div>
 
     <div class="container" id="instructions">
@@ -43,7 +43,7 @@
         </div>
     </div>
 
-    <div>1.26</div>
+    <div>1.27</div>
 
     <script>
         window.fbAsyncInit = function() {
@@ -60,13 +60,13 @@
           FB.Event.subscribe("auth.login", function(response) {
               console.log("login button")
               location.reload();
-            //   goToInstructions();
+              showInstructions();
           });
 
           FB.Event.subscribe("auth.logout", function(response) {
               console.log("logout button")
-            //   location.reload();
-            //   goToInstructions();
+              localStorage.removeItem("facebookID");
+              showTitlePage();
           });
           
           FB.getLoginStatus(function(response) {
@@ -102,7 +102,7 @@
         console.log("ID Token: " + id_token);
 
         localStorage.setItem("googleID", profile.getId());
-        // goToInstructions();
+        showInstructions();
       };
       function signOut() {
           var auth2 = gapi.auth2.getAuthInstance();
