@@ -66,11 +66,11 @@ $(document).ready(function() {
     showTitlePage();
 
     $("#title-btn").click(function() {
-        if (localStorgae.getItem("facebookID") || localStorage.getItem("googleID")) {
-            showGame();
+        if ((localStorgae.getItem("facebookID")) === null && (localStorage.getItem("googleID") === null)) {
+            showLoginBtns();
         }
         else {
-            showLoginBtns();
+            showGame();
         }
     })
 
