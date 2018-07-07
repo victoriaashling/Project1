@@ -66,7 +66,7 @@ $(document).ready(function() {
     showTitlePage();
 
     $("#title-btn").click(function() {
-        if (localstorgae.getItem("facebookID") || localStorage.getItem("googleID")) {
+        if (localStorgae.getItem("facebookID") || localStorage.getItem("googleID")) {
             showGame();
         }
         else {
