@@ -34,28 +34,28 @@ $("#log-out-button").click(function() {
 })
 
 function goToInstructions() {
-    $("#title").hide();
+    $("#title-div").hide();
     $("#login-btns").hide();
     $("#instructions").show();
     $("#game").hide();
 }
 
 $(document).ready(function() {
-    $("#title").show();
+    $("#title-dv").show();
     $("#login-btns").hide();
     $("#instructions").hide();
     $("#game").hide();
 
 
     $("#title-div").click(function() {
-        $("#title").hide();
+        $("#title-div").hide();
         $("#login-btns").show();
         $("#instructions").hide();
         $("#game").hide();
     })
 
     $("#play-btn").click(function() {
-        $("#title").hide();
+        $("#title-div").hide();
         $("#login-btns").hide();
         $("#instructions").hide();
         $("#game").show();
