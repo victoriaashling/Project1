@@ -60,9 +60,9 @@
           FB.Event.subscribe("auth.login", function(response) {
               console.log("login button")
               showInstructions();
-            FB.getLoginStatus(function(response) {
+            // FB.getLoginStatus(function(response) {
               statusChangeCallback(response);
-            });  
+            // });  
           });
 
           FB.Event.subscribe("auth.logout", function(response) {
