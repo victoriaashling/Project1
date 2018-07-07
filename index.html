@@ -20,7 +20,7 @@
 
         <button class="btn" id="fb-login" onclick="FB.login();"><img src="images/flogo-HexRBG-Wht-58.svg" id="fb-logo">Log in</button>
 
-        <button class="btn g-signin2" id="google-login"><img src="images/128px-Google__G__Logo.png" id="google-logo">Google</button>
+        <!-- <button class="btn g-signin2" id="google-login"><img src="images/128px-Google__G__Logo.png" id="google-logo">Google</button> -->
 
         <div class="g-signin2"  data-width="200" data-height="50" data-onsuccess="onSignIn"></div> <!-- data-theme="dark" -->
 
@@ -31,7 +31,7 @@
     </div>
 
     <a href="test.html">Test</a>
-    <div>1.19</div>
+    <div>1.20</div>
 
     <script>
         window.fbAsyncInit = function() {
@@ -60,7 +60,7 @@
            var js, fjs = d.getElementsByTagName(s)[0];
            if (d.getElementById(id)) {return;}
            js = d.createElement(s); js.id = id;
-           js.src = "https://connect.facebook.net/en_US/sdk.js"; //#xfbml=1&version=v3.0&appId=1876746062390308&autoLogAppEvents=1
+           js.src = "https://connect.facebook.net/en_US/sdk.js"; 
            fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
@@ -81,6 +81,8 @@
         // The ID token you need to pass to your backend:
         var id_token = googleUser.getAuthResponse().id_token;
         console.log("ID Token: " + id_token);
+
+        localStorage.setItem("ID", profile.getId());
       };
       function signOut() {
           var auth2 = gapi.auth2.getAuthInstance();
