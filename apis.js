@@ -23,6 +23,7 @@ function testAPI() {
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
       console.log(response);
+      
       localStorage.setItem("facebookID", response.id);
     });
 }
