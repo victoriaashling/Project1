@@ -38,12 +38,12 @@
     <div class="container" id="game">
         <h4>Game</h4>
         <div id="log-out">
-            <button id='log-out-button' onclick="FB.logout();">FB Log Out</button>
-            <a href="#" onclick="signOut();">Google Sign out</a>
+            <button class="btn btn-secondary" id='log-out-button' onclick="FB.logout(); signOut();">Log Out</button>
+            <!-- <a href="#" onclick="signOut();">Google Sign out</a> -->
         </div>
     </div>
 
-    <div>1.31</div>
+    <div>1.32</div>
 
     <script>
         window.fbAsyncInit = function() {
