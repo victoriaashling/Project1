@@ -43,7 +43,7 @@
         </div>
     </div>
 
-    <div>1.32</div>
+    <div>1.33</div>
 
     <script>
         window.fbAsyncInit = function() {
@@ -107,9 +107,11 @@
       function signOut() {
           var auth2 = gapi.auth2.getAuthInstance();
           auth2.signOut().then(function () {
-          console.log('User signed out.');
+            console.log('User signed out.');
           });
+
           localStorage.removeItem("googleID");
+          showTitlePage();
       }
     </script>
 
