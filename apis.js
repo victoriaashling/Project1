@@ -61,17 +61,17 @@ function showGame() {
     $("#game").show();
 }
 
-$(document).ready(function() {
+// $(document).ready(function() {
 
-    showTitlePage();
+//     showTitlePage();
 
-    $("#title-btn").click(function() {
-        if ((localStorgae.facebookID === undefined) && (localStorage.googleID === undefined)) {
-            showLoginBtns();
-        }
-        else {
-            showGame();
-        }
-    })
+//     $("#title-btn").click(function() {
+//         if ((localStorgae.facebookID === undefined) && (localStorage.googleID === undefined)) {
+//             showLoginBtns();
+//         }
+//         else {
+//             showGame();
+//         }
+//     })
 
-});
+// });
