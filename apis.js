@@ -19,12 +19,13 @@ function statusChangeCallback(response) {
 }
 
 function testAPI() {
-    console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
+      
       console.log('Successful login for: ' + response.name);
+      console.log(response);
+
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
-      console.log(response);
 
       localStorage.setItem("facebookID", response.id);
 
@@ -37,8 +38,6 @@ function testAPI() {
     });
 }
 
-
-// var instructionsSeen = false;
 
 
 
