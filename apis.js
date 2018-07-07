@@ -1,5 +1,5 @@
-// localStorage.setItem("instructionsSeen", false);
-localStorage.instructionsSeen = false;
+localStorage.setItem("instructionsSeen", false);
+// localStorage.instructionsSeen = false;
 
 
 function checkLoginState() {
