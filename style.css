@@ -94,6 +94,7 @@ p {
 /* Intro Screen */
 .pages#intro-screen {
     background: linear-gradient(to bottom, #021142, #284579);
+    padding-top: 8vh;
 }
 
 .intro-header {
