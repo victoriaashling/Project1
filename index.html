@@ -38,11 +38,10 @@
         <div id="status"></div>
         <div id="log-out">
             <button class="btn btn-secondary" id='log-out-button' onclick="FB.logout(); signOut();">Log Out</button>
-            <!-- <a href="#" onclick="signOut();">Google Sign out</a> -->
         </div>
     </div>
 
-    <div>1.43</div>
+    <div>1.44</div>
 
     <script>
         window.fbAsyncInit = function() {
@@ -100,7 +99,12 @@
         console.log("ID Token: " + id_token);
 
         localStorage.setItem("googleID", profile.getId());
-        showInstructions();
+        if (localStorage.instructionsSeen === false) {
+            showInstructions();
+        }
+        else {
+            showGame();
+        }
       };
       function signOut() {
           var auth2 = gapi.auth2.getAuthInstance();

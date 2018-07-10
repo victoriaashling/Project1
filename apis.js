@@ -1,6 +1,4 @@
 localStorage.setItem("instructionsSeen", false);
-// localStorage.instructionsSeen = false;
-
 
 function checkLoginState() {
     FB.getLoginStatus(function(response) {
