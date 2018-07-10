@@ -44,6 +44,25 @@ body {
     background: linear-gradient(to bottom, #284579, #4e8eb8);
 }
 
+#fb-login {
+    height: 50px;
+    width: 200px;
+    background-color: #4267B2;
+    color: white;
+    padding-left: 50px;
+    position: relative;
+    border-radius: 2px;
+    box-shadow: 1px 2px 5px  rgba(0, 0, 0, 0.25);
+}
+
+#fb-logo, #google-logo {
+    height: 40px;
+    margin-right: 10px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+
 
 /* Game Screen */
 .pages#game-screen {
