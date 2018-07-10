@@ -96,6 +96,10 @@ p {
     background: linear-gradient(to bottom, #021142, #284579);
 }
 
+.intro-header {
+    margin-bottom: 1em;
+}
+
 .animate {
 	font-size: 50px;
 	text-align: center;
