@@ -38,7 +38,12 @@ function testAPI() {
 }
 
 
-
+function hideAll() {
+    $("#title-div").hide();
+    $("#login-btns").hide();
+    $("#instructions").hide();
+    $("#game").hide();
+}
 
 function showTitlePage() {
     $("#title-div").show();
@@ -48,33 +53,56 @@ function showTitlePage() {
 }
 
 function showLoginBtns() {
-    $("#title-div").hide();
     $("#login-btns").show();
+
+    $("html, body").animate({
+        scrollTop: $("#login-btns").offset().top
+    }, 1000);
+
+    setTimeout(function(){
+        $("#title-div").hide();
+    }, 1000)
+
+    // $("#title-div").hide();
     $("#instructions").hide();
     $("#game").hide();
 }
 
 function showInstructions() {
-    $("#title-div").hide();
-    $("#login-btns").hide();
     $("#instructions").show();
+
+    $("html, body").animate({
+        scrollTop: $("#instructions").offset().top
+    }, 1000);
+
+    setTimeout(function(){
+        $("#login-btns").hide();
+    }, 1000)
+    
+    $("#title-div").hide();
+    // $("#login-btns").hide();
     $("#game").hide();
     localStorage.instructionsSeen = true;
 }
 
 function showGame() {
+    $("#game").show();
+
+    $("html, body").animate({
+        scrollTop: $("#game").offset().top
+    }, 1000);
+
+    setTimeout(function(){
+        $("#instructions").hide();
+    }, 1000)
+
     $("#title-div").hide();
     $("#login-btns").hide();
-    $("#instructions").hide();
-    $("#game").show();
+    // $("#instructions").hide();
+    // $("#game").show();
 }
 
-function hideAll() {
-    $("#title-div").hide();
-    $("#login-btns").hide();
-    $("#instructions").hide();
-    $("#game").hide();
-}
+
 hideAll();
 
 $(document).ready(function() {
