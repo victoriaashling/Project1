@@ -18,7 +18,6 @@ body {
 h1 {
 	font: normal 65px/1 "Monoton", cursive;
     color: rgba(255,255,255,1);
-    margin-bottom: 1em;
 }
 
 h2 {
@@ -45,6 +44,10 @@ p {
     background: linear-gradient(to bottom, #284579, #4e8eb8);
 }
 
+#login-btns {
+    margin: 1em;
+}
+
 #fb-login {
     height: 50px;
     width: 200px;
@@ -63,6 +66,10 @@ p {
     position: absolute;
     left: 5px;
     top: 5px;
+}
+
+#play-anon {
+    margin: 1em;
 }
 
 
