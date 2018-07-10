@@ -11,68 +11,36 @@
     <title>Knocked Up</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
 </head>
 <body>
 
-    <div class="pages" id="intro-screen">      
-        <div class="animate six">
-            <span>K</span>
-            <span>N</span>
-            <span>O</span>
-            <span>C</span>
-            <span>K</span>
-            <span>E</span>
-            <span>D</span>  
-            <span>&nbsp;</span>
-            <span>U</span>
-            <span>P</span>  
-            <br><br>
-            <span id="intro-continue"><i class="fas fa-chevron-down"></i></span>          
-        </div>
-    </div>  
+    <div class="container" id="title-div">
+        <h4>Title</h4>
+        <button class="btn" id="title-btn">Continue</button>
+    </div>
 
-    <div class="pages" id="login-screen">
+    <div class="container" id="login-btns">
         <button class="btn" id="fb-login" onclick="FB.login();"><img src="images/flogo-HexRBG-Wht-58.svg" id="fb-logo">Log in</button>
 
         <div id="my-signin2"></div>
+
     </div>
 
-    <div class="pages" id="help-screen">
-        <div class="info-text">
-            
-            <h1 class="text-center">Instructions</h1>
-
-            <h2 class="help">Game Play:</h2>	
-            <p>Use the arrow keys to move the young lady from left to right. You should avoid being struck by the dropping babies.</p>
-
-            <br><br>
-
-            <h2 class="help">Scoring:</h2>	
-            <p>Receive a point for each baby you avoid.</p>
-
-            <br><br>
-
-            <h2 class="help">Losing:</h2>	
-            <p>Each time a baby falls into your arms, you lose a life.</p>
-
-            <br><br>
-
-            <h2 class="help text-center" id="info-continue">Play</h2>
-
-        </div>
+    <div class="container" id="instructions">
+        <h4>Instructions</h4>
+        <button class="btn" id="play-btn">Play</button>
     </div>
 
-    <div class="pages" id="game-screen">
+    <div class="container" id="game">
+        <h4>Game</h4>
+        <div id="status"></div>
         <div id="log-out">
             <button class="btn btn-secondary" id='log-out-button' onclick="FB.logout(); signOut();">Log Out</button>
         </div>
-
-        <div id="game"></div>
     </div>
 
+    <div>1.54</div>
 
     <script>
         window.fbAsyncInit = function() {
@@ -91,12 +59,12 @@
           });  
 
           FB.Event.subscribe("auth.login", function(response) {
-              console.log("login button");
+              console.log("login button")
               statusChangeCallback(response);
           });
 
           FB.Event.subscribe("auth.logout", function(response) {
-              console.log("logout button");
+              console.log("logout button")
               localStorage.removeItem("facebookID");
               localStorage.removeItem("facebookName");
               showTitlePage();
@@ -112,10 +80,14 @@
            fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
-    
+
     <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-    
+
     <script>
+        if (localStorage.getItem("instructionsSeen") === null) {
+            localStorage.setItem("instructionsSeen", false);
+        }
+
         function onSuccess(googleUser) {
             console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
         
@@ -123,13 +95,16 @@
             localStorage.setItem("userID", profile.getId());
             localStorage.setItem("userName", profile.getGivenName());
             
-            showInstructions();
+            if (localStorage.getItem("instructionsSeen") === false) {
+                showInstructions();
+            }
+            else {
+                showGame();
+            }
         }
-
         function onFailure(error) {
             console.log(error);
         }
-
         function renderButton() {
             gapi.signin2.render('my-signin2', {
                 'scope': 'profile email',
@@ -153,7 +128,6 @@
           showTitlePage();
       }
     </script>
-    
 
 
     <script
@@ -162,9 +136,8 @@
         crossorigin="anonymous">
     </script>
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-    <script src="firebase.js"></script>
-    <script src="apis.js"></script>
+    <!-- <script src="firebase.js"></script> -->
+    <script src="apis2.js"></script>
     <script src="game.js"></script>
-    <script src="intro.js"></script>
 </body>
 </html>

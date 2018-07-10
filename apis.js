@@ -1,5 +1,4 @@
-// localStorage.setItem("instructionsSeen", false);
-
+// Facebook functions
 function checkLoginState() {
     FB.getLoginStatus(function(response) {
       statusChangeCallback(response);
@@ -7,100 +6,87 @@ function checkLoginState() {
 }
 
 function statusChangeCallback(response) {
-    // console.log('statusChangeCallback');
-    // console.log(response);
     if (response.status === 'connected') {
       testAPI();
-    } else {
-    //   document.getElementById('status').innerHTML = 'Please log ' +
-    //     'into this app.';
     }
 }
 
 function testAPI() {
     FB.api('/me', function(response) {
-      
-    //   console.log('Successful login for: ' + response.name);
-    //   console.log(response);
-
-    //   document.getElementById('status').innerHTML =
-    //     'Thanks for logging in, ' + response.name + '!';
-
-      localStorage.setItem("facebookID", response.id);
-      localStorage.setItem("facebookName", response.name);
-
-      if (localStorage.getItem("instructionsSeen") === false) {
+        localStorage.setItem("facebookID", response.id);
+        localStorage.setItem("facebookName", response.name);
+  
         showInstructions();
-      }
-      else {
-        showGame();
-      }
     });
 }
 
+// Intro Animation
+function blinker() {
+	$('.animate').fadeOut(2000);
+	$('.animate').fadeIn(2000);
+}
+setInterval(blinker, 4000);
 
+
+// Screen Change Functions
 function hideAll() {
-    $("#title-div").hide();
-    $("#login-btns").hide();
-    $("#instructions").hide();
-    $("#game").hide();
+    $("#intro-screen").hide();
+    $("#login-screen").hide();
+    $("#help-screen").hide();
+    $("#game-screen").hide();
 }
 
 function showTitlePage() {
-    $("#title-div").show();
-    $("#login-btns").hide();
-    $("#instructions").hide();
-    $("#game").hide();
+    $("#intro-screen").show();
+    $("#login-screen").hide();
+    $("#help-screen").hide();
+    $("#game-screen").hide();
 }
 
 function showLoginBtns() {
-    $("#login-btns").show();
+    $("#login-screen").show();
 
     $("html, body").animate({
-        scrollTop: $("#login-btns").offset().top
+        scrollTop: $("#login-screen").offset().top
     }, 1000);
 
     setTimeout(function(){
-        $("#title-div").hide();
+        $("#intro-screen").hide();
     }, 1000)
 
-    // $("#title-div").hide();
-    $("#instructions").hide();
-    $("#game").hide();
+    $("#help-screen").hide();
+    $("#game-screen").hide();
 }
 
 function showInstructions() {
-    $("#instructions").show();
+    $("#help-screen").show();
 
     $("html, body").animate({
-        scrollTop: $("#instructions").offset().top
+        scrollTop: $("#help-screen").offset().top
     }, 1000);
 
     setTimeout(function(){
-        $("#login-btns").hide();
+        $("#login-screen").hide();
     }, 1000)
     
-    $("#title-div").hide();
-    // $("#login-btns").hide();
-    $("#game").hide();
-    localStorage.setItem("instructionsSeen", true);
+    $("#intro-screen").hide();
+    $("#game-screen").hide();
+    // localStorage.setItem("instructionsSeen", true);
 }
 
 function showGame() {
-    $("#game").show();
+    $("#game-screen").show();
 
     $("html, body").animate({
-        scrollTop: $("#game").offset().top
+        scrollTop: $("#game-screen").offset().top
     }, 1000);
 
     setTimeout(function(){
-        $("#instructions").hide();
+        $("#help-screen").hide();
     }, 1000)
 
-    $("#title-div").hide();
-    $("#login-btns").hide();
-    // $("#instructions").hide();
-    // $("#game").show();
+    $("#intro-screen").hide();
+    $("#login-screen").hide();
 }
 
 
@@ -110,16 +96,11 @@ $(document).ready(function() {
 
     showTitlePage();
 
-    $("#title-btn").click(function() {
-        if ((localStorage.facebookID === undefined) && (localStorage.googleID === undefined)) {
-            showLoginBtns();
-        }
-        else {
-            showGame();
-        }
+    $("#intro-continue").click(function() {
+        showLoginBtns();
     });
 
-    $("#play-btn").click(function() {
+    $("#info-continue").click(function() {
         showGame();
     })
 

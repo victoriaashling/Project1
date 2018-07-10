@@ -1,59 +1,135 @@
-.container {
-    width: 100vw;
+@import url('https://fonts.googleapis.com/css?family=Monoton|Roboto');
+
+
+body {
+	margin: 0;
+    padding: 0;
+	background: linear-gradient(to bottom, #021142, #8ad3f1)
+}
+
+.pages {
+	width: 100vw;
     height: 100vh;
-    background: linear-gradient(to bottom, white, black);
+    box-sizing: border-box;
+    padding: 10vh 10vw;
+    margin: 0;
 }
 
-.login-container {
-    margin-top: 10vh;
-    width: 460px;
-    border-radius: 3px;
-    box-shadow:0px 2px 3px rgba(0, 0, 0, 0.2);
+
+/* Help Screen */
+.pages#help-screen {
+    background: linear-gradient(to bottom, #4e8eb8, #8ad3f1);
 }
 
-.content-container {
-    padding: 1em;
-    border-radius: 3px;
+#help-screen h1 {
+	font: normal 65px/1 "Monoton", cursive;
+    color: rgba(255,255,255,1);
+    margin-bottom: 1em;
 }
 
-button.btn {
-    width: 230px;
-    border-radius: 3px;
+#help-screen h2 {
+	font: normal 40px/1 "Monoton", cursive;
+	color:white;
 }
 
-button.anon.active {
-    box-shadow: inset -3px 2px 5px rgba(0, 0, 0, 0.25);
+#help-screen p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+	color: white;
 }
 
-button.log-in.active {
-    box-shadow: inset 3px 2px 5px rgba(0, 0, 0, 0.25);
+
+/* Login Screen */
+.pages#login-screen {
+    background: linear-gradient(to bottom, #284579, #4e8eb8);
 }
 
-#fb-login {
-    height: 50px;
-    width: 200px;
-    background-color: #4267B2;
-    color: white;
-    padding-left: 50px;
-    position: relative;
-    border-radius: 2px;
-    box-shadow: 1px 2px 5px  rgba(0, 0, 0, 0.25);
+
+/* Game Screen */
+.pages#game-screen {
+    background-color: #8ad3f1;
+    background-image: url(images/Cityscape.png);
+    background-size: contain;
+    padding: 0;
 }
 
-#google-login {
-    height: 50px;
-    width: 200px;
-    color: grey;
-    padding-left: 50px;
-    position: relative;
-    border-radius: 2px;
-    box-shadow: 1px 2px 5px  rgba(0, 0, 0, 0.25);
+
+
+/* Intro Screen */
+.pages#intro-screen {
+    background: linear-gradient(to bottom, #021142, #284579);
 }
 
-#fb-logo, #google-logo {
-    height: 40px;
-    margin-right: 10px;
-    position: absolute;
-    left: 5px;
-    top: 5px;
+.animate {
+	font-size: 50px;
+	text-align: center;
+	padding: 0 0 200px;	
+	margin: 100px 0 0;
+}
+
+.animate span {
+	display: inline-block;
+}
+
+.animate span:nth-of-type(2) {
+	animation-delay: .05s;
+}
+.animate span:nth-of-type(3) {
+	animation-delay: .1s;
+}
+.animate span:nth-of-type(4) {
+	animation-delay: .15s;
+}
+.animate span:nth-of-type(5) {
+	animation-delay: .2s;
+}
+.animate span:nth-of-type(6) {
+	animation-delay: .25s;
+}
+.animate span:nth-of-type(7) {
+	animation-delay: .3s;
+}
+.animate span:nth-of-type(8) {
+	animation-delay: .35s;
+}
+.animate span:nth-of-type(9) {
+	animation-delay: .4s;
+}
+.animate span:nth-of-type(10) {
+	animation-delay: .45s;
+}
+.animate span:nth-of-type(11) {
+	animation-delay: .5s;
+}
+
+.six span {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: none;
+  font: normal 125px/1 "Monoton", Helvetica, sans-serif;
+  color: rgba(255,255,255,1);
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  text-shadow: 0 0 10px rgb(255,255,255) , 
+			   0 0 20px rgb(255,255,255) , 
+			   0 0 30px rgb(255,255,255) , 
+			   0 0 40px rgb(255,17,119) , 
+			   0 0 70px rgb(255,17,119) , 
+			   0 0 80px rgb(255,17,119) , 
+			   0 0 100px rgb(255,17,119) , 
+			   0 0 150px rgb(255,17,119) ;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  transform: rotate(-180deg) translate(150px, 0);
+  animation: twister .5s forwards; 
+}
+
+@keyframes twister {
+	100% {
+		transform: rotate(0deg) translate(0);
+	}
 }

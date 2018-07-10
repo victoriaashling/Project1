@@ -1,0 +1,59 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, white, black);
+}
+
+.login-container {
+    margin-top: 10vh;
+    width: 460px;
+    border-radius: 3px;
+    box-shadow:0px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.content-container {
+    padding: 1em;
+    border-radius: 3px;
+}
+
+button.btn {
+    width: 230px;
+    border-radius: 3px;
+}
+
+button.anon.active {
+    box-shadow: inset -3px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+button.log-in.active {
+    box-shadow: inset 3px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+#fb-login {
+    height: 50px;
+    width: 200px;
+    background-color: #4267B2;
+    color: white;
+    padding-left: 50px;
+    position: relative;
+    border-radius: 2px;
+    box-shadow: 1px 2px 5px  rgba(0, 0, 0, 0.25);
+}
+
+#google-login {
+    height: 50px;
+    width: 200px;
+    color: grey;
+    padding-left: 50px;
+    position: relative;
+    border-radius: 2px;
+    box-shadow: 1px 2px 5px  rgba(0, 0, 0, 0.25);
+}
+
+#fb-logo, #google-logo {
+    height: 40px;
+    margin-right: 10px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
