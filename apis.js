@@ -104,4 +104,8 @@ $(document).ready(function() {
         showGame();
     })
 
+    $("#play-anon").click(function() {
+        showInstructions();
+    })
+
 });
