@@ -45,7 +45,7 @@ p {
 }
 
 #login-btns {
-    margin: 1em;
+    margin: 3em;
 }
 
 #fb-login {
@@ -58,6 +58,7 @@ p {
     border-radius: 2px;
     box-shadow: 1px 2px 5px  rgba(0, 0, 0, 0.25);
     margin-bottom: 1em;
+    margin-right: 1em;
 }
 
 #fb-logo {
@@ -69,7 +70,8 @@ p {
 }
 
 #play-anon {
-    margin: 1em;
+    margin: 3em;
+
 }
 
 
