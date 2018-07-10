@@ -44,7 +44,7 @@
         </div>
     </div>
 
-    <div>1.49</div>
+    <div>1.50</div>
 
     <script>
         window.fbAsyncInit = function() {
@@ -117,10 +117,10 @@
         function renderButton() {
         gapi.signin2.render('my-signin2', {
             'scope': 'profile email',
-            'width': 240,
+            'width': 200,
             'height': 50,
-            'longtitle': true,
-            'theme': 'dark',
+            'longtitle': false,
+            'theme': 'light',
             'onsuccess': onSuccess,
             'onfailure': onFailure
         });
