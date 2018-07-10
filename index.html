@@ -44,7 +44,7 @@
         </div>
     </div>
 
-    <div>1.51</div>
+    <div>1.52</div>
 
     <script>
         window.fbAsyncInit = function() {
@@ -114,7 +114,13 @@
             var profile = googleUser.getBasicProfile();
             localStorage.setItem("googleID", profile.getId());
             localStorage.setItem("googleName", profile.getGivenName());
-            showInstructions();
+            
+            if (localStorage.getItem(instructionsSeen) === true) {
+                showInstructions();
+            }
+            else {
+                showGame();
+            }
         }
         function onFailure(error) {
             console.log(error);
