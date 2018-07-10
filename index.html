@@ -44,7 +44,7 @@
         </div>
     </div>
 
-    <div>1.52</div>
+    <div>1.53</div>
 
     <script>
         window.fbAsyncInit = function() {
@@ -107,6 +107,9 @@
     //     localStorage.setItem("googleName", profile.getGivenName());
     //     showInstructions();
     //   };
+        if (localStorage.getItem("instructionsSeen") === null) {
+            localStorage.setItem("instructionsSeen", false);
+        }
 
         function onSuccess(googleUser) {
             console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
@@ -115,7 +118,7 @@
             localStorage.setItem("googleID", profile.getId());
             localStorage.setItem("googleName", profile.getGivenName());
             
-            if (localStorage.getItem(instructionsSeen) === true) {
+            if (localStorage.getItem("instructionsSeen") === false) {
                 showInstructions();
             }
             else {

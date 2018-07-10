@@ -1,4 +1,4 @@
-localStorage.setItem("instructionsSeen", false);
+// localStorage.setItem("instructionsSeen", false);
 
 function checkLoginState() {
     FB.getLoginStatus(function(response) {
@@ -29,7 +29,7 @@ function testAPI() {
       localStorage.setItem("facebookID", response.id);
       localStorage.setItem("facebookName", response.name);
 
-      if (localStorage.instructionsSeen === false) {
+      if (localStorage.getItem("instructionsSeen") === false) {
         showInstructions();
       }
       else {
@@ -83,7 +83,7 @@ function showInstructions() {
     $("#title-div").hide();
     // $("#login-btns").hide();
     $("#game").hide();
-    localStorage.instructionsSeen = true;
+    localStorage.setItem("instructionsSeen", true);
 }
 
 function showGame() {
