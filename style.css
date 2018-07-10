@@ -51,8 +51,8 @@ p {
 #fb-login {
     height: 50px;
     width: 200px;
-    background-color: #4267B2;
-    color: white;
+    background-color: white;
+    color: #4267B2;
     padding-left: 50px;
     position: relative;
     border-radius: 2px;
@@ -74,8 +74,8 @@ p {
     height: 50px;
     width: 200px;
     border-radius: 2px;
-    background-color: #021142;
-    color: white;
+    background-color: white;
+    color: #021142;
     font-family: 'Roboto', sans-serif;
 }
 
