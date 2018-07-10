@@ -41,7 +41,7 @@
         </div>
     </div>
 
-    <div>1.47</div>
+    <div>1.48</div>
 
     <script>
         window.fbAsyncInit = function() {
@@ -99,12 +99,7 @@
         console.log("ID Token: " + id_token);
 
         localStorage.setItem("googleID", profile.getId());
-        if (localStorage.instructionsSeen === false) {
-            showInstructions();
-        }
-        else {
-            showGame();
-        }
+        showInstructions();
       };
       function signOut() {
           var auth2 = gapi.auth2.getAuthInstance();
