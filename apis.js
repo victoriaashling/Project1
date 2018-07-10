@@ -7,26 +7,27 @@ function checkLoginState() {
 }
 
 function statusChangeCallback(response) {
-    console.log('statusChangeCallback');
-    console.log(response);
+    // console.log('statusChangeCallback');
+    // console.log(response);
     if (response.status === 'connected') {
       testAPI();
     } else {
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into this app.';
+    //   document.getElementById('status').innerHTML = 'Please log ' +
+    //     'into this app.';
     }
 }
 
 function testAPI() {
     FB.api('/me', function(response) {
       
-      console.log('Successful login for: ' + response.name);
-      console.log(response);
+    //   console.log('Successful login for: ' + response.name);
+    //   console.log(response);
 
-      document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
+    //   document.getElementById('status').innerHTML =
+    //     'Thanks for logging in, ' + response.name + '!';
 
       localStorage.setItem("facebookID", response.id);
+      localStorage.setItem("facebookName", response.name);
 
       if (localStorage.instructionsSeen === false) {
         showInstructions();
