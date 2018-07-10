@@ -1,3 +1,9 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, white, black);
+}
+
 .login-container {
     margin-top: 10vh;
     width: 460px;
