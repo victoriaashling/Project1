@@ -15,28 +15,29 @@ body {
     margin: 0;
 }
 
+h1 {
+	font: normal 65px/1 "Monoton", cursive;
+    color: rgba(255,255,255,1);
+    margin-bottom: 1em;
+}
+
+h2 {
+	font: normal 40px/1 "Monoton", cursive;
+	color:white;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+	color: white;
+}
+
 
 /* Help Screen */
 .pages#help-screen {
     background: linear-gradient(to bottom, #4e8eb8, #8ad3f1);
 }
 
-#help-screen h1 {
-	font: normal 65px/1 "Monoton", cursive;
-    color: rgba(255,255,255,1);
-    margin-bottom: 1em;
-}
-
-#help-screen h2 {
-	font: normal 40px/1 "Monoton", cursive;
-	color:white;
-}
-
-#help-screen p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 2em;
-	color: white;
-}
 
 
 /* Login Screen */
@@ -53,9 +54,10 @@ body {
     position: relative;
     border-radius: 2px;
     box-shadow: 1px 2px 5px  rgba(0, 0, 0, 0.25);
+    margin-bottom: 1em;
 }
 
-#fb-logo, #google-logo {
+#fb-logo {
     height: 40px;
     margin-right: 10px;
     position: absolute;
