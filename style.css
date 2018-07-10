@@ -71,10 +71,12 @@ p {
 
 #play-anon {
     margin: 4em;
+    height: 50px;
+    width: 200px;
     border-radius: 2px;
-    font-family: 'Roboto', sans-serif;
     background-color: #021142;
     color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
 
