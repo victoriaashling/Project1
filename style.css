@@ -45,7 +45,7 @@ p {
 }
 
 #login-btns {
-    margin: 3em;
+    margin: 4em;
 }
 
 #fb-login {
@@ -70,8 +70,11 @@ p {
 }
 
 #play-anon {
-    margin: 3em;
-
+    margin: 4em;
+    border-radius: 2px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #021142;
+    color: white;
 }
 
 
