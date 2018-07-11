@@ -106,6 +106,7 @@ $(document).ready(function() {
 
     $("#play-anon").click(function() {
         showInstructions();
+        localStorage.setItem("playAnon", true);
     })
 
 });
