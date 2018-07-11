@@ -91,6 +91,7 @@ p {
     background-color: #8ad3f1;
     background-image: url(images/Cityscape.png);
     background-size: contain;
+    background-repeat: no-repeat;
     padding: 0;
     margin: 0;
 }
