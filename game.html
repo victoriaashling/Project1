@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="phaser-game"></div>
 <script>
-    var game = new Phaser.Game(480, 320, Phaser.CANVAS, null, {
+    var game = new Phaser.Game(480, 320, Phaser.CANVAS, 'phaser-game', {
       preload: preload, create: create, update: update
     });
     var ball;
