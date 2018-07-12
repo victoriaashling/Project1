@@ -104,8 +104,8 @@
 
           FB.Event.subscribe("auth.logout", function(response) {
               console.log("logout button");
-              localStorage.removeItem("facebookID");
-              localStorage.removeItem("facebookName");
+              localStorage.removeItem("userID");
+              localStorage.removeItem("userName");
               showTitlePage();
           });
             
@@ -129,6 +129,7 @@
             var profile = googleUser.getBasicProfile();
             localStorage.setItem("userID", profile.getId());
             localStorage.setItem("userName", profile.getGivenName());
+            localStorage.setItem("playAnon", false);
             
             showInstructions();
         }
@@ -155,8 +156,8 @@
             console.log('User signed out.');
           });
 
-          localStorage.removeItem("googleID");
-          localStorage.removeItem("googleName");
+          localStorage.removeItem("userID");
+          localStorage.removeItem("userName");
           showTitlePage();
       }
     </script> 

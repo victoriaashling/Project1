@@ -26,7 +26,7 @@ var game = new Phaser.Game(480, 320, Phaser.CANVAS, 'game-div', {
       game.stage.backgroundColor = '#eee';
       game.load.image('background', 'images/Cityscape2.png')
       game.load.image('sack', 'images/sack.png');
-      game.load.spritesheet('womansprite', 'images/womanSprite.png', 100, 120);
+      game.load.spritesheet('womansprite', 'images/womanSprite.png', 100, 126);
       game.load.spritesheet('uniqueKey', 'images/newStork.png', 100, 100);
 
       
